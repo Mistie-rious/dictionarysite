@@ -66,7 +66,7 @@ function App() {
 })}>
       <nav className='  justify-between flex align-middle ' >
     <div className={classNames(" text-indigo-300 my-4 font-extrabold  mb-10 flex  ",{
-      'text-indigo-100': isSelected
+      'text-white': isSelected
     })}>
      Dictionary App 
      
