@@ -5,7 +5,7 @@ import classNames from 'classnames';
 
 function Header({phonetic, word, audioUrl, isSelected}) {
     const ref = useRef();
-  console.log(isSelected)
+
     const playMusic = () => {
         ref.current.play();
     }
