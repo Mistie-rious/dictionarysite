@@ -84,7 +84,7 @@ function App() {
      </div>
 
      </nav>
-     <div className='font-extralight'>Enter your Word here!</div>
+     
      
       
        
