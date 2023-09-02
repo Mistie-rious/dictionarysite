@@ -10,7 +10,7 @@ function Header({phonetic, word, audioUrl, isSelected}) {
         ref.current.play();
     }
   return (
-    <div>  
+    <div className='my-2'>  
         
      <div className='flex justify-between'>
        <div className='font-bold'>{word}
@@ -18,15 +18,15 @@ function Header({phonetic, word, audioUrl, isSelected}) {
      </span>
        </div>
        {!isSelected ? (
-       <button onClick={playMusic} className={classNames('  flex-shrink-0 w-10 flex   h-10 transition ease-in-out delay-150  rounded-full ',{
+       <button onClick={playMusic} className={classNames('bg-indigo-100 h-10 w-10   flex-shrink-0  flex flex-row items-center justify-center transition ease-in-out delay-150  rounded-full ',{
         
        })}>
-        <img src={Play1}  className='w-18 h-8 items-center justify-center '></img>
+        <img src={Play1}  width={18} ></img>
        </button> ) : (
-        <button onClick={playMusic} className={classNames('  flex-shrink-0 w-10 flex   h-10 transition ease-in-out delay-150  rounded-full ',{
+        <button onClick={playMusic} className={classNames('  bg-indigo-100 h-10 w-10 flex-shrink-0 justify-center flex flex-row items-center   transition ease-in-out delay-150  rounded-full ',{
         
         })}>
-         <img src={Play2}  className='w-18 h-8 items-center justify-center '></img>
+         <img src={Play2} width={18} ></img>
         </button>
        )
 }
