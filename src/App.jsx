@@ -61,7 +61,7 @@ function App() {
   return (
     <>
       <div className={classNames(' min-h-screen max-h-fit mx-auto px-10 ',{
-      'bg-slate-900': isSelected,
+      'bg-black: isSelected,
       'text-white':isSelected
 })}>
       <nav className='  justify-between flex align-middle ' >
