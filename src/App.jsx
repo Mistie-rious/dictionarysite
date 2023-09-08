@@ -11,6 +11,7 @@ import search from './assets/search.png'
 function App() {
   
   const [isSelected, setIsSelected] = useState(false)
+  const [requestMade, setRequestMade] = useState(false)
   const [word, setWord] = useState("")
   const [results, setResults] = useState([null])
   
@@ -23,19 +24,21 @@ function App() {
 
   const saveWord = (value) => {
     setWord(value)
-    console.log(value)
+
   
   }
 
-  const getWord = async() => {
-   const response = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
+  const getWord = async () => {
+    try {
+      const response = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
+      setResults(response.data[0]);
+      setRequestMade(true)
+    } catch (error) {
+      setResults({});
+    }
+  };
   
 
-   setResults(response.data[0])
-  
-
-  }
-  console.log(results)
 
   const heading = () => {
     if (results && results.phonetics && results.phonetics.length > 0) {
@@ -105,19 +108,22 @@ function App() {
        </div>
       
        
-       {results?.meanings?.length > 0 ? (
-  <div>
-    <Header {...heading()} isSelected={isSelected} />
-    {results.meanings.map((items, index) => (
-      <div key={index}>
-        <Content {...items} isSelected={isSelected} />
-        <Extras {...items} />
-      </div>
-    ))}
-  </div>
-) : (
-  <div>No results</div>
-)}
+       {requestMade ? (
+  results?.meanings?.length > 0 ? (
+    <div>
+      <Header {...heading()} isSelected={isSelected} />
+      {results.meanings.map((items, index) => (
+        <div key={index}>
+          <Content {...items} isSelected={isSelected} />
+          <Extras {...items} />
+        </div>
+      ))}
+    </div>
+  ) : requestMade && (
+    <div>No word found</div>
+  )
+) : null}
+
 
 
       </div>
