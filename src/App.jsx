@@ -105,16 +105,21 @@ function App() {
        </div>
       
        
-       <Header {...heading()}  isSelected={isSelected}/>
-        {results?.meanings?.length > 0 && results.meanings.map((items,index) => (
-          
-          <div key={index}  >
-             
-          <Content {...items} isSelected={isSelected}/>
-            <Extras {...items}/>
-            </div>
-        ))
-        }
+       {results?.meanings?.length > 0 ? (
+  <div>
+    <Header {...heading()} isSelected={isSelected} />
+    {results.meanings.map((items, index) => (
+      <div key={index}>
+        <Content {...items} isSelected={isSelected} />
+        <Extras {...items} />
+      </div>
+    ))}
+  </div>
+) : (
+  <div>No results</div>
+)}
+
+
       </div>
 
     </>
