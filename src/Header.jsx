@@ -23,7 +23,7 @@ function Header({phonetic, word, audioUrl, isSelected}) {
        })}>
         <img src={Play1}  width={18} ></img>
        </button> ) : (
-        <button onClick={playMusic} className={classNames('  bg-indigo-100 h-10 w-10 flex-shrink-0 justify-center flex flex-row items-center   transition ease-in-out delay-150  rounded-full ',{
+        <button onClick={playMusic} className={classNames('  bg-indigo-200 h-10 w-10 flex-shrink-0 justify-center flex flex-row items-center   transition ease-in-out delay-150  rounded-full ',{
         
         })}>
          <img src={Play2} width={18} ></img>
