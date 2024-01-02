@@ -71,7 +71,7 @@ function App() {
     <div className={classNames(" text-indigo-300 my-4 font-extrabold  mb-10 flex  ",{
       'text-indigo-200': isSelected
     })}>
-     Dictionary App 
+     WordSphere
      
      </div>
      <div onClick={() => setIsSelected(!isSelected)} className={classNames('flex rounded-full my-4 transition-all items-center duration-700 bg-slate-400 w-20 h-10',{
