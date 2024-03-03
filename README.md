@@ -4,10 +4,10 @@ This web application is a functional dictionary built with Vite, a lightning-fas
 
 Features:
 
- *Intuitive search: Enter a word in the search bar and press "Enter" or click the search icon.
- *Comprehensive results: View the definition, synonyms, antonyms, and audio pronunciation for the searched word (if available from the API).
- *Modern design: The application boasts a clean and user-friendly design, enhancing the overall user experience.
- *Robust API integration: Fetches data seamlessly from a supported dictionary API (see "API Usage" below).
+  * Intuitive search: Enter a word in the search bar and press "Enter" or click the search icon.
+  * Comprehensive results: View the definition, synonyms, antonyms, and audio pronunciation for the searched word (if available from the API).
+  * Modern design: The application boasts a clean and user-friendly design, enhancing the overall user experience.
+  * Robust API integration: Fetches data seamlessly from a supported dictionary API (see "API Usage" below).
 
 Installation and Usage:
 ```
