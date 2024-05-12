@@ -1,4 +1,4 @@
-Dictionary App
+## Dictionary App
 
 This web application is a functional dictionary built with Vite and Tailwind CSS.
 
