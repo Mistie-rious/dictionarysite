@@ -20,12 +20,5 @@ Start the development server:
 
 
 
-API Usage:
-
-This application relies on an external dictionary API to fetch word details. To function correctly, you need to:
-  *  Obtain an API key: If the chosen API requires authentication, sign up for a free or paid plan and obtain an API key.
-   * Set the API key: Replace the placeholder value YOUR_API_KEY in the src/api/dictionaryApi.js file with your actual API key.
-
-
 Contributing:
 Contributions are welcome. Feel free to fork the repository, make changes, and submit a pull request.
